@@ -1,0 +1,21 @@
+{
+  "rootDir": "../",
+  "roots": [
+    "<rootDir>/server"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "<rootDir>/server"
+  ],
+  "testEnvironment": "node",
+  "testMatch":["<rootDir>/server/**/?(*.)(spec|test).js?(x)"],
+  "bail": false,
+  "verbose": false,
+  "collectCoverage": false,
+  "moduleFileExtensions": [
+    "js"
+  ],
+  "testPathIgnorePatterns": [
+    "<rootDir>/build/", 
+    "<rootDir>/node_modules/"]
+}

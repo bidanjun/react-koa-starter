@@ -1,0 +1,52 @@
+{
+  "name": "react-koa-starter",
+  "version": "0.0.1",
+  "private": false,
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bidanjun/react-koa-starter.git"
+  },
+  "dependencies": {
+    "fork-ts-checker-webpack-plugin-alt": "^0.4.14",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-favicon": "^2.0.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "react-scripts": "2.1.8",
+    "rimraf": "^2.6.3",
+    "start-server-webpack-plugin": "^2.2.5",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "concurrently -n \"Server,Client\" -c \"bgBlue.bold,bgMagenta.bold\" -p \"{index}-{name}\" \"npm run start:server\"  \"npm run start:web\" ",
+    "start:web": "cross-env NODE_ENV=development react-scripts start",
+    "start:server": "cross-env NODE_ENV=development PORT=3001 webpack --config  ./config/webpack.server.dev.js",
+    "build": "npm run clean && npm run build:web && npm run build:server",
+    "build:web": "react-scripts build",
+    "build:server": "set NODE_ENV = \"production\" && webpack --config  ./config/webpack.server.js",
+    "test": "concurrently -n \"Server,Client\" -c \"bgBlue.bold,bgMagenta.bold\" -p \"{index}-{name}\" \"npm run test:server\"  \"npm run test:web\" ",
+    "test:web": "react-scripts test",
+    "test:server": "jest  --config server/jest.config.json",
+    "clean": "rimraf lib",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
