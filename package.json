@@ -14,7 +14,8 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-native-web": "^0.11.1"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
@@ -24,7 +25,7 @@
     "start-server-webpack-plugin": "^2.2.5",
     "webpack-cli": "^3.3.0",
     "webpack-node-externals": "^1.7.2",
-    "fork-ts-checker-webpack-plugin-alt": "^0.4.14",
+    "fork-ts-checker-webpack-plugin-alt": "^0.4.14"
   },
   "proxy": "http://localhost:3001",
   "scripts": {
