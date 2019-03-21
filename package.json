@@ -1,6 +1,6 @@
 {
   "name": "react-koa-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "license": "BSD-3-Clause",
   "repository": {
@@ -8,7 +8,6 @@
     "url": "https://github.com/bidanjun/react-koa-starter.git"
   },
   "dependencies": {
-    "fork-ts-checker-webpack-plugin-alt": "^0.4.14",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-favicon": "^2.0.1",
@@ -24,7 +23,8 @@
     "rimraf": "^2.6.3",
     "start-server-webpack-plugin": "^2.2.5",
     "webpack-cli": "^3.3.0",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "fork-ts-checker-webpack-plugin-alt": "^0.4.14",
   },
   "proxy": "http://localhost:3001",
   "scripts": {
