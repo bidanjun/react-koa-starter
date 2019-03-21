@@ -9,4 +9,4 @@ call npm install --save-dev webpack-node-externals start-server-webpack-plugin
 call npm install --save koa koa-static koa-favicon koa-router koa-bodyparser
 
 echo now for react-native-web
-call npm install react-native-web
+call npm install react-native-web react-native-material-ui
